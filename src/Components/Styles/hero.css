@@ -30,6 +30,49 @@ nav {
   justify-content: center;
 }
 
+#bg-img {
+  background: linear-gradient(270deg, #ff2400, #2d1612);
+  background-size: 400% 400%;
+
+  -webkit-animation: CustomAnimation 30s ease infinite;
+  -moz-animation: CustomAnimation 30s ease infinite;
+  animation: CustomAnimation 30s ease infinite;
+}
+
+@-webkit-keyframes CustomAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes CustomAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes CustomAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .bg-img {
   height: 100%;
   width: 100%;
@@ -55,11 +98,6 @@ h1 {
   color: white;
   font-size: 400%;
   margin-top: 100px;
-
-  /* 
-  @media (max-width: 600px) {
-    font-size: 300%;
-  } */
 }
 
 .examples {
@@ -70,29 +108,6 @@ h1 {
   align-items: center;
   padding: 10 3px;
   flex-wrap: nowrap;
-
-  /* @media (max-width: 1600px) {
-    width: auto;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  @media (max-width: 660px) {
-    grid-template-columns: 1fr;
-    width: auto;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-  } */
-
-  /* @media (max-width: 1090px) {
-    grid-template-columns: 1fr;
-    width: auto;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-  } */
 }
 
 #menu::-webkit-scrollbar {
@@ -146,6 +161,7 @@ h1 {
   color: white;
   font-size: 40px;
   text-align: center;
+  display: flex;
   @media (max-width: 620px) {
     font-size: 20px;
   }
@@ -168,6 +184,15 @@ h1 {
   margin-bottom: 20px;
 }
 
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 620px) {
+    max-width: 250px;
+  }
+}
+
 .social-medias {
   margin-top: 20px;
   font-size: 10px;
@@ -183,24 +208,14 @@ h1 {
   left: 0;
   width: 100%;
   min-height: -webkit-fill-available;
-  z-index: -1; /* Чтобы div был под остальными элементами */
-  background-size: cover; /* Растягивает изображение, чтобы оно покрывало весь div */
-  background-position: center;
-  background-repeat: no-repeat;
-
-  /* @media (max-width: 1200px) {
-    height: 300vh;
-  }
-
-  @media (max-width: 600px) {
-    height: 440vh;
-    width: 430px;
-  } */
+  z-index: -1;
+  background-size: cover;
 }
 
 .socialic {
   width: 60px;
   margin-bottom: 15px;
+  filter: invert(100%);
 
   @media (max-width: 620px) {
     width: 50px;

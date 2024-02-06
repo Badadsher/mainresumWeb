@@ -18,7 +18,9 @@
   --textColor: #eee;
 }
 
-
+.logotype {
+  opacity: 0%;
+}
 
 header {
   position: sticky;
@@ -32,8 +34,7 @@ header {
   color: var(--textColor);
   z-index: 5;
 
-  @media (max-width: 620px){
-    
+  @media (max-width: 620px) {
   }
 }
 
